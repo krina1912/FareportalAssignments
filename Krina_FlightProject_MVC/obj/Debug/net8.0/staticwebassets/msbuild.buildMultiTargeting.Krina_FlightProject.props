@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Krina_FlightProject.props" />
+</Project>

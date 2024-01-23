@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj": {}
+    "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj": {
+    "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj",
+        "projectUniqueName": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj",
         "projectName": "bankprojdb",
-        "projectPath": "C:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj",
+        "projectPath": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj",
         "packagesPath": "C:\\Users\\K.P.ha22\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\obj\\",
+        "outputPath": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\K.P.ha22\\AppData\\Roaming\\NuGet\\NuGet.Config"

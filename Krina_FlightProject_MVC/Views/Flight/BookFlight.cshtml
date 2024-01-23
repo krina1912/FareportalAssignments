@@ -1,0 +1,45 @@
+@model Krina_FlightProject.Models.KrinaBooking
+
+@{
+    ViewData["Title"] = "BookFlight";
+}
+
+<h1>BookFlight</h1>
+
+<h4>KrinaBooking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="BookFlight">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         
+         
+            <div class="form-group">
+                <label asp-for="NofPasseng" class="control-label"></label>
+                <input asp-for="NofPasseng" id="NofPasseng" class="form-control" />
+                <span asp-validation-for="NofPasseng" class="text-danger"></span>
+            </div>
+            <br>
+            <span id="total_cost">
+                
+            </span>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Book it" class="btn btn-primary" />
+            </div>
+        </form>
+        <script>
+            document.querySelector("#NofPasseng").addEventListener("input",function(){
+                let count=this.value;
+                let cost =@ViewBag.cost;
+                document.querySelector("#total_cost").textContent=`Your Total Cost will be= Rs. ${cost*count}`;
+            })
+            
+        </script>
+    </div>
+</div>
+
+<div>
+    <a asp-action="SearchResult">Back to Flight List</a>
+</div>
+

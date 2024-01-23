@@ -1,0 +1,70 @@
+@model IEnumerable<Krina_FlightProject.Models.KrinaFlight>
+
+@{
+    ViewData["Title"] = "ViewFlight";
+}
+
+<h1>ViewFlight</h1>
+
+<p>
+    <a asp-action="AddFlight">Add Flight</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flightname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flightname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Fid }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Fid })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

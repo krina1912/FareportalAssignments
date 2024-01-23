@@ -4022,11 +4022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj",
+      "projectUniqueName": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj",
       "projectName": "bankprojdb",
-      "projectPath": "c:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\bankprojdb.csproj",
+      "projectPath": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\bankprojdb.csproj",
       "packagesPath": "C:\\Users\\K.P.ha22\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\K.P.ha22\\Desktop\\Fareportal\\bankprojdb\\obj\\",
+      "outputPath": "C:\\Users\\K.P.ha22\\Desktop\\FareportalAssignments\\bankprojdb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\K.P.ha22\\AppData\\Roaming\\NuGet\\NuGet.Config"
