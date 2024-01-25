@@ -1,0 +1,74 @@
+@model IEnumerable<ClientSide.Models.KrinaFlight>
+
+@{
+    ViewData["Title"] = "SearchResult";
+}
+
+<h1>Flight Available</h1>
+
+<p>
+    <div>
+    <a asp-action="FlightSearch">Back to Searching Flight</a>
+</div>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flightname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flightname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+                @* @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) | *@
+                @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) | *@
+                @Html.ActionLink("Book Now", "BookFlight", new { flightid=item.Fid})
+                 @* <a asp-controller="Booking" asp-action="BookTicket">Book Now</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

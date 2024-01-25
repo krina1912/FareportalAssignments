@@ -1,0 +1,79 @@
+@model ClientSide.Models.KrinaFlight
+
+@{
+    ViewData["Title"] = "FlightSearch";
+}
+
+@* <div>
+     @Html.ActionLink("Edit", "Edit", new { id= }) |
+</div> *@
+     
+    @* <a class="btn" asp-controller="Booking" asp-action="CustomerBooking" >Show Booking</a>
+
+    <a class="btn" asp-controller="Customer" asp-action="ViewCustomer" >View Your Profile</a>
+
+    
+    <hr> *@
+           
+          
+
+@* <p>
+    <a asp-controller="Booking" asp-action="CustomerBooking">Show Bookings</a>
+</p>
+<p>
+    <a asp-controller="Login" asp-action="ViewCustomerProfile">View Your Profile</a>
+</p>
+<p>
+    <a asp-controller="Login" asp-action="EditCustomerProfile">Edit Your Profile</a>
+</p> *@
+
+<center>
+<h1>Flight Search</h1>
+
+</center>
+
+
+<hr />
+
+<center>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="FlightSearch">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="DepartId" class="control-label"></label>
+                @* <input asp-for="DepartId" id="DepartId" class="form-control" /> *@
+                <select asp-for="DepartId" id="DepartId" asp-items="@ViewBag.flightids"></select>
+                <span asp-validation-for="DepartId" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="ArrivalId" class="control-label"></label>
+                @* <input asp-for="ArrivalId" id="ArrivalId" class="form-control" /> *@
+                <select asp-for="ArrivalId" id="ArrivalId" asp-items="@ViewBag.flightids"></select>
+
+                <span asp-validation-for="ArrivalId" class="text-danger"></span>
+            </div>
+            <br>
+           
+            <div class="form-group">
+                <label asp-for="DepartTime" class="control-label"></label>
+                <input asp-for="DepartTime" class="form-control" id="DepartTime" type="datetime-local" />
+                <span asp-validation-for="DepartTime" class="text-danger"></span>
+            </div>
+            <br>
+         
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</center>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

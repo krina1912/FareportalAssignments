@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 >What would you like to do?</h1>
+
+    <hr>
+    <br>
+    @* <a asp-controller="Flight" asp-action="FlightSearch">Search Flights</a>
+    <a asp-controller="Booking" asp-action="GetCustomerBooking">Check Your Bookings</a>
+    <a asp-controller="Customer" asp-action="EditProfile">Edit Profile</a> *@
+<button type="button" class="btn btn-primary" onclick="window.location.href='/Flight/FlightSearch'">Search Flights</button>
+<button type="button" class="btn btn-secondary" onclick="window.location.href='/Booking/GetCustomerBooking'">Check Your Bookings</button>
+<button type="button" class="btn btn-info" onclick="window.location.href='/Customer/EditProfile'">Edit Profile</button>
+
+
+
+     
+
+</div>

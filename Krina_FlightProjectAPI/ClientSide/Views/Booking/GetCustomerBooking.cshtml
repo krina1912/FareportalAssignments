@@ -1,0 +1,52 @@
+@model IEnumerable<ClientSide.Models.KrinaBooking>
+
+@{
+    ViewData["Title"] = "GetCustomerBooking";
+}
+
+<h1>Your Booking</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Bookdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Flightid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NofPasseng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.Bookdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flightid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NofPasseng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+               
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Bid })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
