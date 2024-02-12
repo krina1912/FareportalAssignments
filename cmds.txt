@@ -1,0 +1,31 @@
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet aspnet-codegenerator view AddEmployee Create -m Employee -outDir Views\Employee --useDefaultLayout --referenceScriptLibraries
+
+- create for adding , list for presenting, details
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef dbcontext scaffold "Server=DEVSQL.Corp.local;Database=ACE 5- 2024;Trusted_Connection=True;encrypt=false" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+Scaffold-DbContext "Server=DEVSQL.Corp.local;Database=ACE 5- 2024;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+
+dotnet aspnet-codegenerator view AddEmployee Create -m Employee -outDir Views\Employee --useDefaultLayout --referenceScriptLibraries
+
+
+
+- Controller will not have logic just pass model to view its for abstraction
+- create cs file for methods for logic and stuff and call these method in controller
+
+API NOTES:
+
+- in API no view is there
+- subscription to the apis
+- with one data source we can have multiple views
+-json object mei data will be given
+
+1. API returns the data in the form of json or xml or bson
+2. it uses only http protocol
+3. in api, view will not be there
+- api controller diff from mvc controller
